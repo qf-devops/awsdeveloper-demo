@@ -1,0 +1,37 @@
+Parameters:
+  InstanceTypeParameter:
+    Type: String
+    Default: t2.micro
+    AllowedValues:
+      - t2.micro
+      - m1.small
+      - m1.large
+    Description: Enter t2.micro, m1.small, or m1.large. Default is t2.micro.
+  ImageNname:
+    Type: String
+    Default: "ami-0f5ee92e2d63afc18"
+Resources:
+  MyEC2Instance1: 
+    Type: AWS::EC2::Instance
+    Properties: 
+      ImageId: 
+        Ref: ImageNname
+      KeyName: "mumbai"
+      InstanceType:
+        Ref: InstanceTypeParameter
+      Tags:
+        - Key: "name"
+          Value: "mycfndemo1"
+        - Key: "env"
+          Value: "devo"
+Outputs:
+  InstanceID:
+    Description: The Instance ID
+    Value: !Ref MyEC2Instance1
+  MyEC2Instance1PIP:
+    Description: MyEC2Instance1 Public IP
+    Value: !GetAtt MyEC2Instance1.PublicIp
+    # Value: { "Fn::GetAtt" : [ "MyEC2Instance1", "PublicIp" ]},
+  MyEC2Instance1PrIP:
+    Description: MyEC2Instance1 Private IP
+    Value: !GetAtt MyEC2Instance1.PrivateIp
