@@ -85,40 +85,40 @@ Resources:
             - !Ref SubnetID
           SecurityGroups:
             - !GetAtt ContainerSecurityGroup.GroupId
-    JenTaskDefinition:
-      Type: AWS::ECS::TaskDefinition
-      Properties:
-        Family: deployment-jenkins-task
-        Cpu: 1024
-        Memory: 1024
-        NetworkMode: awsvpc
-        ExecutionRoleArn: !Ref ExecutionRole
-        ContainerDefinitions:
-          - Name: jenkins
-            Image: jenkins/jenkins:lts
-            PortMappings:
-              - ContainerPort: 80
-            LogConfiguration:
-              LogDriver: awslogs
-              Options:
-                awslogs-region: !Ref AWS::Region
-                awslogs-group: !Ref JenLogGroup
-                awslogs-stream-prefix: ecs
-        RequiresCompatibilities:
-          - EC2
-          - FARGATE
-    JenService:
-      Type: AWS::ECS::Service
-      Properties:
-        ServiceName: deployment-jenkins-service
-        Cluster: !Ref Cluster
-        TaskDefinition: !Ref JenTaskDefinition
-        DesiredCount: 1
-        LaunchType: FARGATE
-        NetworkConfiguration:
-          AwsvpcConfiguration:
-            AssignPublicIp: ENABLED
-            Subnets:
-              - !Ref SubnetID
-            SecurityGroups:
-              - !GetAtt JenContainerSecurityGroup.GroupId
+  JenTaskDefinition:
+    Type: AWS::ECS::TaskDefinition
+    Properties:
+      Family: deployment-jenkins-task
+      Cpu: 1024
+      Memory: 1024
+      NetworkMode: awsvpc
+      ExecutionRoleArn: !Ref ExecutionRole
+      ContainerDefinitions:
+        - Name: jenkins
+          Image: jenkins/jenkins:lts
+          PortMappings:
+            - ContainerPort: 80
+          LogConfiguration:
+            LogDriver: awslogs
+            Options:
+              awslogs-region: !Ref AWS::Region
+              awslogs-group: !Ref JenLogGroup
+              awslogs-stream-prefix: ecs
+      RequiresCompatibilities:
+        - EC2
+        - FARGATE
+  JenService:
+    Type: AWS::ECS::Service
+    Properties:
+      ServiceName: deployment-jenkins-service
+      Cluster: !Ref Cluster
+      TaskDefinition: !Ref JenTaskDefinition
+      DesiredCount: 1
+      LaunchType: FARGATE
+      NetworkConfiguration:
+        AwsvpcConfiguration:
+          AssignPublicIp: ENABLED
+          Subnets:
+            - !Ref SubnetID
+          SecurityGroups:
+            - !GetAtt JenContainerSecurityGroup.GroupId
