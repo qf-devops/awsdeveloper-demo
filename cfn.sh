@@ -4,5 +4,5 @@
 
 #aws cloudformation delete-stack --stack-name demo
 
-aws cloudformation create-stack --stack-name myecsstack --template-body file:///$PWD/ecs.yml --parameters ParameterKey=SubnetID,ParameterValue=subnet-e58fafa9
+aws cloudformation create-stack --stack-name myecsstack --template-body file:///$PWD/ecs.yml --parameters ParameterKey=SubnetID,ParameterValue=subnet-e58fafa9 --capabilities CAPABILITY_NAMED_IAM
 
