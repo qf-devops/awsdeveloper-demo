@@ -1,0 +1,4 @@
+    Attach the policy to the IAM user to which you want to grant these permissions.
+
+This policy allows the IAM user to assume the specified role and use the AWS CLI to fetch temporary security credentials (such as access keys) using the
+ aws sts get-session-token command.
