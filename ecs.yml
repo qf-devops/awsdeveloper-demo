@@ -89,7 +89,7 @@ Resources:
     Type: AWS::ECS::TaskDefinition
     Properties:
       Family: deployment-jenkins-task
-      Cpu: 1024
+      Cpu: 512
       Memory: 1024
       NetworkMode: awsvpc
       ExecutionRoleArn: !Ref ExecutionRole
