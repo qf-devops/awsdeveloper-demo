@@ -1,0 +1,22 @@
+---
+- hosts: "all"
+  vars:
+
+  tasks:
+  - apt:
+      name: nginx
+      state: latest
+  - name: file copy
+    copy:
+      src: index.html
+      dest: /var/www/html
+    notify: restart service
+  - name: start service
+    service:
+      name: nginx
+      state: started
+  handlers:
+  - name: restart service
+    service:
+      name: nginx
+      state: started

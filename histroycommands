@@ -1,0 +1,268 @@
+  1  clear
+    2  pwd
+    3  ls -lerrt
+    4  ls -lrt
+    5  exit
+    6  clear
+    7  cd /tmp/
+    8  ls -lrt
+    9  clear
+   10  cd
+   11  which aws
+   12  aws
+   13  sudo apt install awscli
+   14  sudo apt update
+   15  sudo apt install awscli
+   16  which aws
+   17  history
+   18  clear
+   19  aws --help
+   20  aws help
+   21  aws configure
+   22  clear
+   23  pwd
+   24  cd .aws/
+   25  ls -rlt
+   26  cat config 
+   27  cat credentials 
+   28  clear
+   29  cd
+   30  aws s3 help
+   31  aws s3 ls
+   32  awss3 ls
+   33  aws s3 ls
+   34  aws s3 help
+   35  aws s3 mb --help
+   36  aws s3 mb help
+   37  aws s3 mb s3://mybucket --region us-west-1
+   38  aws s3 mb s3://vytec124354674gdfg --region us-west-1
+   39  aws s3 cp help
+   40  ls
+   41  touch a.txt
+   42  aws s3 cp a.txt s3://vytec124354674gdfg/abc/a.txt
+   43  aws s3 rm s3://vytec124354674gdfg/abc/a.txt
+   44  aws s3 cp a.txt s3://vytec124354674gdfg/abc/a.txt
+   45  aws s3 mb s3://vytec124354674vvvvvv --region us-west-1
+   46  aws s3 cp a.txt s3://vytec124354674vvvvvv/abc/a.txt
+   47  aws s3 rb s3://vytec124354674gdfg
+   48  aws s3 rm s3://vytec124354674gdfg/*
+   49  aws s3 rb s3://vytec124354674gdfg
+   50  aws s3 help
+   51  aws s3 rm s3://vytec124354674gdfg S3 Prefix Operations
+   52  qq
+   53  clear
+   54  aws s3 rm s3://vytec124354674gdfg --recursive
+   55  aws s3 rb s3://vytec124354674gdfg
+   56  aws s3 ls
+   57  clear
+   58  aws s3 ls
+   59  aws s3 ls | cut -d" " -f 3
+   60  aws s3 ls | cut -d" " -f 3 | xargs -I{} aws s3 rb s3://{} --force
+   61  aws s3 ls
+   62  clear
+   63  aws ec2 help
+   64  aws ec2 describe-instances
+   65  init 0
+   66  sudo init 0
+   67  clear
+   68  pwd
+   69  ls
+   70  ls -lrt
+   71  history
+   72  clear
+   73  pwd
+   74  git clone https://github.com/qf-devops/awsdeveloper-demo.git
+   75  cd awsdeveloper-demo/
+   76  clear
+   77  ls -rlt
+   78  sh cfn.sh 
+   79  git pull
+   80  clear
+   81  sh cfn.sh 
+   82  git pull
+   83  clear
+   84  sh cfn.sh 
+   85  git pull
+   86  sh cfn.sh 
+   87  git pull
+   88  clear
+   89  sh cfn.sh 
+   90  git pull
+   91  sh cfn.sh 
+   92  clear
+   93  pwd
+   94  sudo -i
+   95  clear
+   96  aws
+   97  history
+   98  clear
+   99  sudo -i
+  100  exit
+  101  clear
+  102  pwd
+  103  docker run --help
+  104  clear
+  105  cat ~/.aws/credentials 
+  106  clear
+  107  pwd
+  108  ls -lrt
+  109  cd awsdeveloper-demo/
+  110  git pull
+  111  clear
+  112  ls -lrt
+  113  sh cfn.sh 
+  114  git pull
+  115  sh cfn.sh 
+  116  ckeaclear
+  117  clear
+  118  git pull
+  119  sh c
+  120  chmod +x cfn.sh 
+  121  ./cf
+  122  ./cfn.sh 
+  123  git pull
+  124  clear
+  125  ls -lrt
+  126  chmod 665 ecs.yml 
+  127  ls -lrt
+  128  chmod 0665 ecs.yml 
+  129  ls -lrt
+  130  chmod 0664 ecs.yml 
+  131  ls -lrt
+  132  clkear
+  133  clear
+  134  git pull
+  135  ./cfn.sh 
+  136  git pull
+  137  ./cfn.sh 
+  138  aws cloudformation delete-stack --stack-name myecsstack
+  139  clear
+  140  git pull
+  141  eksctl
+  142  cd
+  143  touch a.sh
+  144  vi a.sh 
+  145  sh a.sh
+  146  clear
+  147  which eksctl
+  148  cd awsdeveloper-demo/
+  149  ls -lrt
+  150  ./eks.sh
+  151  chmod +x eks.sh 
+  152  ./eks.sh
+  153  clear
+  154  aws eks update-kubeconfig --region ap-south-1 --name eks-cluster
+  155  cat ~/.kube/config 
+  156  clear
+  157  kubectl get node
+  158  cd
+  159  curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.26.4/2023-05-11/bin/linux/amd64/kubectl
+  160  ls -lrt
+  161  cat a.sh 
+  162  mv kubectl /usr/local/bin/
+  163  sudo mv kubectl /usr/local/bin/
+  164  clear
+  165  which kubectl
+  166  sudo chmod +x /usr/local/bin/kubectl 
+  167  which kubectl
+  168  ls -lrt ~/.kube/config 
+  169  kubectl --help
+  170  kubectl get node
+  171  pwd
+  172  ls
+  173  curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.27.1/2023-04-19/bin/linux/arm64/kubectl
+  174  sudo rm -rf /usr/local/bin/kubectl 
+  175  sudo mv kubectl /usr/local/bin/
+  176  sudo chmod 777 /usr/local/bin/kubectl 
+  177  clear
+  178  kubectl get node
+  179  curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.25.9/2023-05-11/bin/linux/amd64/kubectl.sha256
+  180  ls -lrt
+  181  curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.25.9/2023-05-11/bin/linux/amd64/kubectl.sha256
+  182  ls -lrt
+  183  curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.26.4/2023-05-11/bin/linux/amd64/kubectl.sha256
+  184  ls -lrt
+  185  rm -rf kubectl.sha256 
+  186  clear
+  187  curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.26.4/2023-05-11/bin/linux/amd64/kubectl
+  188  rm -rf kubectl 
+  189  curl -O https://s3.ap-south-1.amazonaws.com/amazon-eks/1.26.4/2023-05-11/bin/linux/amd64/kubectl
+  190  ls -lrt
+  191  rm -rf kubectl 
+  192  curl -O https://s3.ap-south-1.amazonaws.com/amazon-eks/1.26.4/2023-05-11/bin/linux/amd64/kubectl
+  193  ls -lrt
+  194  sudo mv kubectl /usr/local/bin/
+  195  sudo chmod 777 /usr/local/bin/kubectl 
+  196  kubectl --version
+  197  kubectl version
+  198  curl -LO https://dl.k8s.io/release/v1.26/bin/linux/amd64/kubectl
+  199  ls -lt
+  200  clear
+  201  rm kubectl 
+  202  curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.26.4/2023-05-11/bin/linux/amd64/kubectl
+  203  ls -lrt
+  204  chmod 777 kubectl 
+  205  sudo mv kubectl /usr/local/bin/
+  206  kubectl get node
+  207  curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.23.6/bin/linux/amd64/kubectl
+  208  ls -lrt
+  209  chmod 777 kubectl 
+  210  ./kubectl get node
+  211  sudo kubectl /usr/local/bin/
+  212  sudo mv kubectl /usr/local/bin/
+  213  which kubectl
+  214  kubectl get node
+  215  kubectl get ns
+  216  kubectl create ns dev
+  217  kubectl get ns
+  218  kubectl run --help
+  219  kubectl run n1 --image=nginx --port=80 -n dev
+  220  kubectl get pod -n  dev
+  221  kubectl describe pod n1 -n  dev
+  222  kubectl expose
+  223  kubectl expose --help
+  224  kubectl expose POD n1 --port=80 --target-port=80 --name=n1s --type=NodePort
+  225  kubectl expose POD n1 --port=80 --target-port=80 --name=n1s --type=NodePort -n dev
+  226  kubectl get svc -n dev
+  227  kubectl delete svc n1s -n dev
+  228  kubectl expose POD n1 --port=80 --target-port=80 --name=n1s --type=LoadBalancer -n dev
+  229  kubectl get svc -n dev
+  230  kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v3.0.0-alpha0/charts/kubernetes-dashboard.yaml
+  231  kubectl get svc -n kubernetes-dashboard
+  232  kubectl edit svc kubernetes-dashboard-web -n kubernetes-dashboard
+  233  kubectl get svc -n kubernetes-dashboard
+  234  history
+  235  clear
+  236  eks --help
+  237  eksctl help
+  238  eksctl delete --help
+  239  eksctl delete nodegroup  help
+  240  eksctl delete nodegroup --cluster eks-cluster
+  241  eksctl delete nodegroup --cluster eks-cluster --name mynodegrp
+  242  eksctl delete cluster
+  243  eksctl delete cluster --name eks-cluster
+  244  clear
+  245  sudo -i
+  246  sudo init 0
+  247  clear
+  248  aws configure
+  249  clear
+  250  touch boto3.py
+  251  vi boto3.py 
+  252  python boto3.py 
+  253  python3 boto3.py 
+  254  cat boto3.py 
+  255  which pip
+  256  which pip3
+  257  touch requirements.txt
+  258  vi requirements.txt 
+  259  python -m pip install -r requirements.txt
+  260  python3 -m pip install -r requirements.txt
+  261  sudo apt-get -y install python3-pip
+  262  sudo pip3 install boto3
+  263  history'
+  264  history
+  265  python3 boto3.py 
+  266  mv boto3.py abc.py
+  267  python3 abc.py 
+  268  history
